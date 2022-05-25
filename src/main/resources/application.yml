@@ -1,0 +1,43 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/graproject?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    # 密码以0开头必须用双引号
+    password: "0000"
+  jackson:
+    date-format: yyyy/MM/dd HH:mm:ss
+
+    # 邮箱发送配置
+  mail:
+    default-encoding: UTF-8
+    host: smtp.qq.com
+    username: 1092022925@qq.com
+    password: daeizfmlyjqybada
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  main:
+    # 关掉spring logo
+    banner-mode: off
+
+
+# mybatis-plus配置
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+    # 去掉logo
+    banner: false
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
