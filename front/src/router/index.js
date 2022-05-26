@@ -62,27 +62,6 @@ const routes = [
         component: () => import("../views/Edit"),
         meta: { requiresAuth: true }
     },
-
-
-
-    {
-        path: '/qq/login',
-        component: () => import("../assets/img/qq/views/Login")
-    },
-    {
-        path: '/qq/register',
-        component: () => import("../assets/img/qq/views/Register")
-    },
-    {
-        path: '/qq/forget',
-        component: () => import("../assets/img/qq/views/Forget")
-    },
-    {
-        path: '/qq/writer',
-        component: () => import("../assets/img/qq/views/Writer")
-    }
-
-
 ]
 
 const router = new VueRouter({
